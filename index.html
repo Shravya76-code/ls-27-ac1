@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inheritance</title>
+    </head>
+
+    <body>
+
+        <h2>Inheritance Examples</h2>
+        <button onclick="showSounds()">Show sounds</button>
+
+        <p id="output"></p>
+
+        <script>
+            // Parent class
+            class animal  {
+                speak()  {
+                    return "Animal makes a sond";
+                }
+            }
+
+            // Child class Dog
+            class Dog extends  Animal {
+                speak()  {
+                    return "Dog Barks";
+                }
+            }
+
+                        // Child class Cat
+            class Cat extends  Animal {
+                speak()  {
+                    return "Cat moows";
+                }
+            }
+
+            function showSounds()  {
+                const Dog = new Dog();
+                const Cat = new Cat();
+
+                document.getElementById("output").innerHTML = dog.speak() + "<br>" + cat.speak();
+
+        
+            }
+        </script>
+    </body>
+</html>
